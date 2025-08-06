@@ -1,7 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import mongoose from "mongoose";
-import post from "@/model/post";
+import Post from "../../model/post";
+
 
 type Data = {
   name: string;
