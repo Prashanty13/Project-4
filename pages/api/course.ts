@@ -1,7 +1,8 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 import mongoose from "mongoose";
-import course from "@/model/course";
+import course from "../../model/course";
+
 
 type Data = {
   name: string;

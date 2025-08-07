@@ -1,0 +1,25 @@
+import mongoose from "mongoose";
+
+const courseSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  instructor: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+// Avoid model recompilation during development
+const Course = mongoose.models.Course || mongoose.model("Course", courseSchema);
+
+export default Course;
+
