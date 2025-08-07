@@ -24,7 +24,7 @@ export default async function handler(
         const link1 = req.body.link1
         const link2 = req.body.link2
 
-        let p = new post({
+        let p = new Post({
                     title: title,
                     content: content,
                     imgurl: imgurl,
@@ -38,7 +38,7 @@ export default async function handler(
     }
 
     if(req.method == 'GET'){
-        const posts = await post.find();
+        const posts = await Post.find();
         res.status(200).json({ success: true , data: posts});
     }
   
